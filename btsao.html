@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>bai1</h2>
+<p>cac so lon hon 10 trong day 1,23,22,14,57,8,4,99,4,34 la</p>
+<p id="text"></p>
+<button onclick="bai1()">click</button>
+<h2>bai2</h2>
+<p id="text1"></p>
+<button onclick="bai2()">click</button>
+<script>
+    function bai1() {
+
+
+        let arr = [1, 23, 22, 14, 57, 8, 4, 99, 4, 34];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] >= 10) {
+                console.log(arr[i])
+                document.getElementById('text').innerHTML += '<br>' + arr[i]
+
+            }
+        }
+    }
+
+    function bai2() {
+        let arr = [1, 23, 22, 14, 57, 8, 4, 99, 4, 34];
+        let max = arr[0]
+        let address = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                address = i
+            }
+        }document.getElementById('text1').innerHTML=`gia tri lon nhat trong mang la ${max} o vi tri ${address}`
+    }
+</script>
+</body>
+</html>
